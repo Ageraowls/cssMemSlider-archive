@@ -5,6 +5,12 @@
 
 body {
   background-color: rgb(245, 245, 245);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+span {
+  display: block;
 }
 
 .slider {
@@ -29,6 +35,10 @@ body {
   width: 400%;
 }
 
+.bottom-wrapper {
+  display: flex;
+}
+
 .slide {
   width: 25%;
   transition: all 0.6s ease;
@@ -40,18 +50,37 @@ body {
   margin: 8px;
   cursor: pointer;
   background-color: rgb(102, 153, 204);
-  opacity: 0.5;
+  opacity: 0.4;
   border-radius: 10px;
   transition: all 0.4s ease;
 }
 
 .navigation {
   display: flex;
+  align-items: flex-end;
 }
 
 .bar:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   transform: scale(1.1);
+}
+
+.bar:checked {
+  opacity: 1;
+}
+
+.slider__text-items {
+  display: flex;
+  flex-direction: column;
+  height: 300%;
+  margin-right: 2rem;
+  overflow: hidden;
+}
+
+.slider__text {
+  height: 40%;
+  flex-shrink: 0;
+  transition: 0.5s;
 }
 
 input[name='control'] {
