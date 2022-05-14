@@ -7,10 +7,16 @@ body {
   background-color: rgb(245, 245, 245);
   font-size: 1.1rem;
   font-weight: bold;
+  font-family: 'Radio Canada', sans-serif;
 }
 
 span {
   display: block;
+}
+
+p {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .slider {
@@ -23,7 +29,7 @@ span {
 
 .slider {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 3%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,14 +51,33 @@ span {
 }
 
 .bar {
-  height: 8px;
-  width: 30px;
-  margin: 8px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
   cursor: pointer;
-  background-color: rgb(102, 153, 204);
-  opacity: 0.4;
-  border-radius: 10px;
-  transition: all 0.4s ease;
+  transition: all 0.3s;
+}
+
+.circle {
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: rgb(245, 245, 245);
+  border: 0.2rem solid #72adff;
+  margin: auto;
+  align-self: center;
+}
+
+.bar:hover .circle {
+  background-color: #fff;
+  border-color: #000;
+}
+
+.bar:active .circle {
+  background-color: #fff;
+  border-color: #000;
+  opacity: 0.9;
 }
 
 .navigation {
@@ -65,15 +90,11 @@ span {
   transform: scale(1.1);
 }
 
-.bar:checked {
-  opacity: 1;
-}
-
 .slider__text-items {
   display: flex;
   flex-direction: column;
   height: 300%;
-  margin-right: 2rem;
+  margin-right: 5rem;
   overflow: hidden;
 }
 
@@ -101,4 +122,11 @@ input[name='control'] {
 
 #switch-four:checked ~ .push {
   margin-left: 75%;
+}
+
+#switch-one:checked ~ .bottom-wrapper > .navigation > label[for='switch-one'] > .circle,
+#switch-two:checked ~ .bottom-wrapper > .navigation > label[for='switch-two'] > .circle,
+#switch-three:checked ~ .bottom-wrapper > .navigation > label[for='switch-three'] > .circle,
+#switch-four:checked ~ .bottom-wrapper > .navigation > label[for='switch-four'] > .circle {
+  background-color: rgba(1, 1, 1, 0.9);
 }
